@@ -1,4 +1,10 @@
 .Tab {
+  border: 2px solid rgb(155, 0, 155, 0.5);
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+  box-shadow: 0 0 50px 0 rgb(70, 0, 70);
+  color: white;
   display: block;
   margin: auto;
   margin-top: 3%;

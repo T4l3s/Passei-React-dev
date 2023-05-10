@@ -1,14 +1,19 @@
 import React from "react";
 import { useSignOut } from "react-auth-kit";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   const signOut = useSignOut();
   const navigate = useNavigate();
 
+  const navLogin = () => {
+    navigate("/");
+    setTimeout(signOut, 1000);
+  };
+
   return (
     <div>
-      teste
-      <button onClick={signOut}>Logout</button>
+      <button onClick={navLogin}>Logout</button>
     </div>
   );
 };
