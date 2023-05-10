@@ -146,7 +146,9 @@ export const Header = () => {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography textAlign="center" id={setting}>
+                    {setting}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
