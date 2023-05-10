@@ -1,4 +1,5 @@
 .redirect {
+  color: white;
   display: block;
   margin-left: 65%;
   font-size: 14px;
@@ -14,12 +15,13 @@
   margin: 5% 25% 0% 25%;
 }
 
-.Login {
+.Register {
   border-radius: 5%;
   padding: 20% 0% 10% 0%;
 }
 
 .title_register {
+  color: white;
   transform: scale(1.5);
   font-size: 24px;
   font-weight: bold;
@@ -28,6 +30,7 @@
 }
 
 .input_register {
+  color: white;
   box-shadow: 0 0 50px 0 rgb(70, 0, 70);
   color: white;
   border: 2px solid rgb(155, 0, 155, 0.5);
@@ -48,6 +51,7 @@
 }
 
 .btn_register {
+  color: white;
   transform: scale(1.25);
   margin-top: 5%;
   margin-bottom: 5%;

@@ -12,6 +12,7 @@
 }
 
 .title_login {
+  color: white;
   transform: scale(1.5);
   font-size: 24px;
   font-weight: bold;
@@ -20,6 +21,7 @@
 }
 
 .input_login {
+  color: white;
   box-shadow: 0 0 50px 0 rgb(70, 0, 70);
   color: white;
   border: 2px solid rgb(155, 0, 155, 0.5);
@@ -40,6 +42,7 @@
 }
 
 .btn_login {
+  color: white;
   transform: scale(1.25);
   margin-top: 5%;
   margin-bottom: 3%;
@@ -61,11 +64,13 @@
 }
 
 .a_signup {
+  color: white;
   cursor: pointer;
   text-decoration: underline;
 }
 
 .SignUp {
+  color: white;
   font-size: 14px;
   margin: auto;
 }

@@ -38,7 +38,7 @@ export const Frame_Register = () => {
   return (
     <Container maxWidth="xg">
       <div className={register.Frame}>
-        <div className={register.Login}>
+        <div className={register.Register}>
           <p className={register.title_register}>Registro</p>
           <input
             className={register.input_register}
