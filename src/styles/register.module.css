@@ -1,0 +1,78 @@
+.Frame {
+    box-shadow: 0 0 50px 0 rgb(128, 0, 128);
+    background-color: purple;
+    border-radius: 3%;
+    text-align: center;
+    margin: 5% 25% 0% 25%;
+  }
+  
+  .Login {
+    border-radius: 5%;
+    padding: 20% 0% 10% 0%;
+  }
+  
+  .title_register {
+    transform: scale(1.5);
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: -12%;
+    margin-bottom: 3%;
+  }
+  
+  .input_register {
+    box-shadow: 0 0 50px 0 rgb(70, 0, 70);
+    color: white;
+    border: 2px solid rgb(155, 0, 155, 0.5);
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+    max-width: 190px;
+    margin-top: 5%;
+  }
+  
+  .input_register::placeholder {
+    color: rgb(182, 182, 182);
+  }
+  
+  .input_register:focus {
+    outline: 0;
+    box-shadow: 2px 2px 15px rgb(100, 0, 100) inset;
+  }
+  
+  .btn_register {
+    transform: scale(1.25);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    background-color: rgba(155, 0, 155, 1);
+    border-style: none;
+    border-radius: 10px;
+    padding: 0.5% 5% 0.5% 5%;
+    box-shadow: 0 0 50px 0 rgba(70, 0, 70, 1);
+  }
+  
+  .btn_register:hover {
+    cursor: pointer;
+  }
+  
+  .btn_register:active {
+    outline: 0;
+    cursor: pointer;
+    box-shadow: 2px 2px 15px rgb(100, 0, 100) inset;
+  }
+  
+  @media screen and (max-width: 545px) {
+    .title_register {
+      transform: scale(1.25);
+    }
+  
+    .input_register {
+      transform: scale(0.7);
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .input_register {
+      transform: scale(0.6);
+    }
+  }
+  
