@@ -1,14 +1,6 @@
 import React from "react";
-import { useSignOut } from "react-auth-kit";
+import { Header } from "../components/Header";
 
 export const Home = () => {
-  const signOut = useSignOut();
-  const navigate = useNavigate();
-
-  return (
-    <div>
-      teste
-      <button onClick={signOut}>Logout</button>
-    </div>
-  );
+  return <Header />;
 };

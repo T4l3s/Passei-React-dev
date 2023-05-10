@@ -3,7 +3,7 @@ import { useSignIn } from "react-auth-kit";
 import { Container } from "@mui/system";
 import React, { useState } from "react";
 import axios from "axios";
-import login from '../styles/login.module.css';
+import login from "../styles/login.module.css";
 import { useNavigate } from "react-router-dom";
 
 export const Frame_Login = () => {
@@ -15,9 +15,13 @@ export const Frame_Login = () => {
   const navigate = useNavigate();
   const signIn = useSignIn();
 
+  const navHome = () => {
+    navigate("/");
+  };
+
   const SignUp = () => {
-    navigate("/register")
-  }
+    navigate("/register");
+  };
 
   async function handleInput() {
     await axios
@@ -27,18 +31,18 @@ export const Frame_Login = () => {
       })
       .then((res) => {
         setCode(res.data);
-        setToken(res.data.token_access)
+        signIn({
+          token: res.data.token_access,
+          expiresIn: 3600,
+          tokenType: "Bearer",
+          authState: { login: log },
+        });
       })
       .catch((err) => {
         console.error(err);
       });
-    await signIn({
-      token: token,
-      expiresIn: 3600,
-      tokenType: "Bearer",
-      authState: { login: log },
-    });
     setIsShown(true);
+    setTimeout(navHome(), 10000);
   }
 
   return (
@@ -60,8 +64,15 @@ export const Frame_Login = () => {
             onChange={(e) => setPass(e.target.value)}
           />
           <br></br>
-          <button className={login.btn_login} onClick={() => handleInput()}>Login</button>
-          <p className={login.SignUp}>Não tem uma conta <a className={login.a_signup} onClick={() => SignUp()}>registre-se</a></p>
+          <button className={login.btn_login} onClick={() => handleInput()}>
+            Login
+          </button>
+          <p className={login.SignUp}>
+            Não tem uma conta{" "}
+            <a className={login.a_signup} onClick={() => SignUp()}>
+              registre-se
+            </a>
+          </p>
         </div>
       </div>
       {isShown && <Alert_Error Notice={code.message} Color={code.resp} />}
