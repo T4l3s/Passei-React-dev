@@ -1,0 +1,7 @@
+.btn_menuItem {
+  color: white;
+}
+
+.btn_menuItem:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
